@@ -38,7 +38,7 @@ $stateProvider
         .state('root', {
             url: '/root',
             templateUrl: 'templates/root.html',
-            //controller: 'root'
+            controller: 'root'
         
         })
 
@@ -67,7 +67,8 @@ $stateProvider
         })
         .state('root.work.addDialog', {
           
-            templateUrl: 'templates/addDialog.html'
+            templateUrl: 'templates/addDialog.html',
+            controller: 'work'
         })
         .state('root.work.editDialog', {
           
