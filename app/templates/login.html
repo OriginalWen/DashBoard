@@ -1,0 +1,30 @@
+  
+    
+     
+        <div id="loginContainer">
+            <div class="botLine col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <h1>Login</h1>
+                </div>
+
+	<form class="form-horizontal" ng-submit="submitForm()" novalidate>
+        <div ng-hide="true" id="notice" ng-init="valid=true">
+                
+            <span>Incorrect information, please try again</span>
+        </div>
+  		<div class="form-group">
+    		<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+      			<input type="text" class="form-control" ng-model="userName" ng-change="typed()"  placeholder="User Name">
+    		</div>
+  		</div>
+  		<div class="form-group">
+    		<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+      			<input type="password" class="form-control" ng-model="password" ng-change="typed()" placeholder="Password">
+    		</div>
+  		</div>
+  		<div class="form-group">
+    		<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+      			<button type="submit" class="btn btn-success btn-lg btn-block" value="login"  ng-init="loginEnable=true;">Login</button>
+    		</div>
+  		</div>
+	</form>
+        </div>

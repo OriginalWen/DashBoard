@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        #sidebar{
+            
+ 
+            
+        }
+        #sidebar li{
+            
+            list-style: none;
+            font-size: 18px;
+            padding-left:10px;
+            margin-top:10px;
+            
+        }
+        #sidebar span {
+            
+            margin-right:10px;
+        }
+        #sidebar li a{
+            color:#3b3b3b;
+            
+            
+        }
+        #sidebar li:hover{
+            
+            border-left: 5px solid #ea6c57;
+            color:#ea6c57;
+            
+            
+            
+        }
+        #sidebar li a:hover{
+            
+            color:#ea6c57;
+            text-decoration: none;
+            
+        }
+        #workImgList{
+            
+            margin-left:10px;
+            margin-top:15px;
+        }
+    .workImg {
+        width:100%;
+        margin-top: 15px;
+        list-style: none;
+        color:#3b3b3b;
+    
+    }
+        .workImg img{
+            
+            width:100%;
+            
+        }  
+        .workImg p{
+            
+            line-height: 8px;
+            font-size: 12px;
+            
+        }
+         .workImg a{
+            
+            color:#67aa79;
+        }
+        .update{
+            
+            display: block;
+            float:right;
+            font-size: 12px;
+        }
+        
+        #brand img{
+            position: relative;
+            bottom:10px;
+        }
+        #addItem{
+            
+            margin-right:70%;
+        }
+        #selectDesign{
+            margin-right:10%;
+        }
+       .modal-title{
+            text-align:center;
+            font-weight: bold;
+        }
+        .selected{
+            
+              color:#ea6c57;
+               border-left: 5px solid #ea6c57;
+        }
+        #sidebar .selected a{
+            
+            color:#ea6c57;
+            text-decoration: none;
+            
+        }
+        h4.modal-title{
+	       text-align: center;
+        }
+        div.modal-footer button{
+	       float: left;
+        }
+        #workList{
+            
+            margin-top:15px;
+        }
+        .loginDisable{
+            
+            opacity: 0.5;
+            
+        }
+        body{
+            margin:0;
+            padding:0;
+            
+        }
+        #loginContainer{
+	   background-image: url(../assets/images/src/app/background.jpg);
+        width:100%;
+            height:1000px;
+            margin:0;
+            padding-top:250px;
+            background-size:1500px;
+            background-repeat: repeat-y;
+            }
+       
+        div.botLine{
+            border-bottom: 1px solid white;
+	       text-align: center;
+            margin-bottom: 20px;
+        }
+        div h1{
+	       color:white;
+        }
+        #notice{
+            
+            background-color: #ea6c57;
+            color:#fff;
+            margin: 0 auto;
+        }
+        
+    </style>
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/work.js"></script>
+    <script src="scripts/services/session.js"></script>
+       <script src="scripts/services/getUser.js"></script>
+    <script src="scripts/services/authenticate.js"></script>
+   
+    
+</head>
+    
+    <body ng-app="myApp">
+   
+        <div ui-view></div>
+        
+        
+    </body>
+    
+</html>
