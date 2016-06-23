@@ -19,6 +19,7 @@ app.controller('login', function($scope, $state, authenticate, session) {
         } else {
             // Not log the user in
            // $scope.reminder = !$scope.reminder;
+           $scope.valid=false;
             console.log("error");
         }
     }
