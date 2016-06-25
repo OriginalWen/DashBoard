@@ -47,15 +47,7 @@ $stateProvider
           
             templateUrl: 'templates/confirmBox.html'
         })
-        .state('root.work.addDialog', {
-          
-            templateUrl: 'templates/addDialog.html',
-            controller: 'work'
-        })
-        .state('root.work.editDialog', {
-          
-            templateUrl: 'templates/editDialog.html'
-        })
+       
 
  // alert(a);
 
