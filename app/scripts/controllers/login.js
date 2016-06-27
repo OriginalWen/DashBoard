@@ -12,20 +12,14 @@ app.controller('login', function($scope, $state, authenticate, session) {
         
     
         if (authenticate.getUser() == "success") {
-           
+           $scope.valid=true;
             $state.go("root.work");
           
 
-        } else {
-           
+        } else if(authenticate.getUser() == "wrong") {
             $scope.valid=false;
             console.log("error");
         }
     }
 
 });
-    
-  
-
-
-    
