@@ -21,6 +21,7 @@ app.factory('authenticate', function($http, session) {
         res = response.data.authentication;
 
     }, function() {
+        res="wrong";
         console.log("wrong");
     });
             return res;
