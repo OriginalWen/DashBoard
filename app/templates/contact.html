@@ -1,0 +1,94 @@
+	
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+        	<h1> Contact</h1>
+			<ul class="nav nav-tabs nav-justified">
+	  			<li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab" >Information</a></li>
+	  			<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab">Query</a></li>
+	  			<li role="presentation" ><a href="#conf" aria-controls="conf" role="tab" data-toggle="tab">Confirmation</a></li>
+			</ul>
+			<div class="tab-content">
+    			<div role="tabpanel" class="tab-pane active" id="info">
+    				<form name="inform">
+						<div class="form-group">
+    						<label for="exampleInputPassword1">First Name</label>
+    						<input type="text" class="form-control" placeholder="First Name" ng-model="firstName" ng-required="true">
+  						</div>
+		  				<div class="form-group">
+		    				<label for="exampleInputPassword1">Last Name</label>
+		    				<input type="text" class="form-control" placeholder="Last Name" ng-model="lastName" ng-required="true">
+		  				</div>
+		  				<div class="form-group">
+		    				<label for="exampleInputPassword1">Phone</label>
+		    				<input type="text" class="form-control bfh-phone" placeholder="Phone" data-format="+1 (ddd) ddd-dddd" ng-model="phone" ng-required="true">
+		  				</div>
+		  				<div class="form-group">
+		    				<label for="exampleInputEmail1">Email</label>
+		    				<input type="email" class="form-control" placeholder="Email" ng-model="email" ng-required="true">
+		  				</div>
+		  				<form role="form">
+		    				<div class="form-group">
+		      					<label for="sel1">Location</label>
+								<select class="form-control" id="sel1" ng-required="true">
+								    <option ng-repeat="location in locations" ng-model="location">{{location.title}}</option>
+								</select>
+							</div>
+						</form>
+						<div>
+						{{date|date:medium}}
+						</div>
+  						<button type="submit" class="btn btn-primary" ng-disabled="!inform.$valid">Next</button>
+					</form>
+    			</div>
+    			<div role="tabpanel" class="tab-pane" id="query">
+    				<form>
+						<div class="form-group">
+    						<label for="exampleInputPassword1">Title</label>
+    						<input type="text" class="form-control" placeholder="Title" ng-model="title">
+  						</div>
+		  				<div class="form-group">
+		    				<label for="exampleInputPassword1">Contents</label>
+		    				<textarea class="form-control" rows="6" placeholder="Contents of the query should go here..." ng-model="contents"></textarea>
+		  				</div>
+		  				<form role="form">
+		    				<div class="form-group">
+		      					<label for="sel1">Category</label>
+								<select class="form-control" id="sel2">
+								    <option ng-repeat="category in categories" ng-model="category">{{category.title}}</option>
+								</select>
+							</div>
+						</form>
+						<div>
+    						<h4 style="display:inline-block">Priority</h4>
+						    <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+						    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+						</div>
+  						<button type="submit" class="btn btn-primary">Next</button>
+					</form>
+    			</div>
+    			<div role="tabpanel" class="tab-pane" id="conf">
+    				<br><p>Here is the confirmation for your query, if everything is correct, fell free to send it to us. We would love to take a look and will get back to you as soon as possible. In the meantime, you can send the confirmation to your email by clicking on the "Mail To" link</p>
+    				<h5><strong>Confirmation ID</strong></h5>
+    				<p>#4498906229</p>
+    				<h5><strong>Confirmation Date</strong></h5>
+    				<p>#4498906229</p>
+    				<h5><strong>Confirmation Details</strong></h5>
+    				<div class="roundBorder">
+    					<p>=====Information=====</p>
+    					<p>Full Name: {{firstName}} {{lastName}}</p>
+    					<p>Email: {{email}}</p>
+    					<p>Phone: {{phone}}</p>
+    					<p>Location: {{location}}</p>
+    					<p>=====Query=====</p>
+    					<p>Title: {{title}}</p>
+    					<p>Category: {{category}}</p>
+    					<p>Priority: {{rate}}</p>
+    					<p>Content: {{contents}}</p>
+    				</div>
+    				<h5><a href="mailto:{{email}}">Mail to</a></h5>
+
+    			</div>
+  			</div>
+			
+		</div>
+        
+
