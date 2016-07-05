@@ -35,9 +35,6 @@
 </div>
 <div id="workImgList" class="container-fluid" ng-hide="hideImage" ng-init="hideImage=false;">
        <div class="row">
-           
-       
-     
          <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="work in works | filter:greaterThan1| filter:greaterThan2 | filter: search">
            <li class="workImg" title="{{work.title}}">
                     <img src="{{work.image}}"/>

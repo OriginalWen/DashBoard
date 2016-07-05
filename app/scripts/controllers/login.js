@@ -16,10 +16,9 @@ app.controller('login', function($scope, $state, authenticate, session) {
             $state.go("root.work");
           
 
-        } else {
-           
-            $scope.valid=false;
+        } else if(authenticate.getUser() == "wrong") {
             console.log("error");
+             $scope.valid=false;
         }
     }
 

@@ -10,7 +10,7 @@
 
 
 
-var app = angular.module('myApp',['ui.router']);
+var app = angular.module('myApp',['ui.router', 'ui.bootstrap','ngMessages','ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     
@@ -32,9 +32,8 @@ $stateProvider
         })
         .state('root.overview', {
             url: '/overview',
-            templateUrl: 'templates/overview.html'
-            
-        
+            templateUrl: 'templates/overview.html',
+            controller: 'overview'
         })
     
         .state('login', {
@@ -46,6 +45,12 @@ $stateProvider
         .state('root.work.confirmBox', {
           
             templateUrl: 'templates/confirmBox.html'
+        })
+
+        .state('root.contact', {
+            url: '/contact',
+            templateUrl: 'templates/contact.html',
+            controller: 'contact'
         })
     
  // alert(a);

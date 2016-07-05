@@ -18,8 +18,7 @@ app.factory('authenticate', function($http, session) {
                     password: psw
                 });
     promise.then(function(response) {
-        res = response.data.authentication;
-
+        res = response.data.authentication;  
     }, function() {
         console.log("wrong");
     });
