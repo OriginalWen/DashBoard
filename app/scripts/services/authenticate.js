@@ -20,6 +20,7 @@ app.factory('authenticate', function($http, session) {
     promise.then(function(response) {
         res = response.data.authentication;  
     }, function() {
+        res="wrong";
         console.log("wrong");
     });
             return res;
